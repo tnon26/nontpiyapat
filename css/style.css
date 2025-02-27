@@ -74,7 +74,7 @@ nav ol {
 
 nav ol li {
     display: inline;
-    padding: 2vw;
+    padding: 1vw;
 }
 
 nav ol li a {
@@ -514,7 +514,8 @@ footer h4{
 @media screen and (max-width:800px) {
     .grid {
         justify-content: center;
-        grid-template-columns: minmax(200px, 400px);
+        grid-template-columns: 1fr;
+        /* grid-template-columns: minmax(200px, 400px); */
         grid-template-rows: repeat(9, minmax(100px, 200px));
         grid-template-areas: 
         'two'
