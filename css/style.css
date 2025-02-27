@@ -136,15 +136,17 @@ main #showcase #title-showcase {
 }
 
 .grid div {
-    border-radius: 10px;
-    overflow: hidden;
-    justify-items: stretch;
+    /* border-radius: 10px; */
+    /* overflow: hidden;
+    justify-items: stretch; */
 }
 
 .grid div img {
     object-fit: cover;
     height: 100%;
     width: 100%;
+    object-position: center;
+    border-radius: 10px;
 }
 
 .fgrid {
@@ -439,7 +441,6 @@ footer {
     height: auto;
     max-width: 100%;
     width: auto;
-    padding: 1vw;
 }
 
 #flex2 a {
