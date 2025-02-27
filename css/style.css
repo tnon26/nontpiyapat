@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --trans: .3s all ease-in-out;
+    --hoversize: scale(1.1);
+    --blackcolor: #0a0a0a;
+    --bblackcolor: #262626;
+    --whitecolor: #fafafa;
+    --dwhitecolor: #f2f2f2;
+    --moveright: translateX(50px);
+    --moveleft: translateX(-50px)
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Lato", sans-serif;
+    overflow-x: hidden;
+    background-color: var(--blackcolor);
+}
+
+h1 {
+    color: var(--whitecolor);
+    letter-spacing: .5vw;
+}
+
+h2 {
+    color: var(--whitecolor);
+    letter-spacing: .3vw;
+}
+
+h3 {
+    color: var(--bblackcolor);
+    font-weight: 400;
+}
+
+h4 {
+    color: var(--whitecolor);
+}
+
+h5 {
+    color: var(--dwhitecolor);
+}
+
+p {
+    color: var(--dwhitecolor);
+    font-size: clamp(.8em, 2vw, 1.02em)
+}
+
+hr {
+    max-width: 80%;
+    width: auto;
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    transition: var(--trans);
+    width: 90vw;
+    margin: auto;
+}
+
+/* nav */
+
+nav {
+    text-align: center;
+    padding: 5%;
+}
+
+nav ol {
+    padding: 0;
+}
+
+nav ol li {
+    display: inline;
+    padding: 2vw;
+}
+
+nav ol li a {
+    text-decoration: none;
+    color: var(--whitecolor);
+    font-size: 1.05em;
+    padding: 1vw;
+    transition: var(--trans);
+    border-radius: 20px;
+}
+
+nav ol li a:hover {
+    box-shadow: var(--dwhitecolor) 0px 0px 10px;
+}
+
+/* header */
+
+header {
+    margin: 10%;
+    text-align: center;
+}
+
+header img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+/* main */
+
+main {
+    text-align: center;
+}
+
+main #showcase {
+    
+}
+
+main #showcase #title-showcase {
+    background-color: var(--dwhitecolor);
+    height: 10vh;
+    font-size: 500;
+    color: var(--bblackcolor);
+    align-content: center;
+    margin-bottom: 10vh;
+}
+
+/* First grid */
+.grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, minmax(112px, 320px));
+    grid-template-areas: 
+    'one two two three'
+    'four five five six'
+    'seven eight eight nine';
+}
+
+.grid div {
+    border-radius: 10px;
+    overflow: hidden;
+    justify-items: stretch;
+}
+
+.grid div img {
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+    width: auto;
+    display: block; 
+}
+
+.fgrid {
+    position: relative;
+}
+
+.textcard {
+    background-color: rgba(242, 242, 242, 0.6);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: var(--trans);
+    justify-content: center;
+}
+
+.textcard:hover {
+    opacity: 1;
+}
+
+.textcard a {
+    text-decoration: underline;
+    color: var(--blackcolor);
+    font-size: min(3vw, 36px);
+    transition: var(--trans);
+}
+
+.textcard a:hover {
+    transform: var(--hoversize);
+}
+
+.l-one {
+    grid-area: one;
+}
+
+.mid-one {
+    grid-area: two;
+}
+
+.r-one {
+    grid-area: three;
+}
+
+.l-two {
+    grid-area: four;
+}
+
+.mid-two {
+    grid-area: five;
+}
+
+.r-two {
+    grid-area: six;
+}
+
+.l-three {
+    grid-area: seven;
+}
+
+.mid-three {
+    grid-area: eight;
+}
+
+.r-three {
+    grid-area: nine;
+}
+
+/* second grid */ 
+
+#content {
+    margin: 10%;
+}
+
+main #aboutme {
+    background-color: var(--dwhitecolor);
+    height: 10vh;
+    font-size: 500;
+    color: var(--bblackcolor);
+    align-content: center;
+    margin-top: 20vh;
+}
+
+.grid2 {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(5, minmax(150px, 250px));
+    grid-template-areas:
+    'one one one'
+    'two three four'
+    'five three six'
+    'seven three eight'
+    'nine nine nine';
+}
+
+.grid2 div {
+    border-radius: 10px;
+    overflow: hidden;
+    justify-items: stretch;
+    align-content: center;
+    position: relative;
+    box-shadow: var(--bblackcolor) 0px 0px 50px;
+}
+
+.grid2 div img {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+}
+
+.grid2 h1, p{
+    padding: 0 20px;
+}
+
+.grid2 div h2 {
+    transition: var(--trans);
+    opacity: 1;
+    text-shadow: 1px 1px 10px black;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.grid2 div:hover h2 {
+    opacity: 0;
+}
+
+.grid2 div a {
+    transition: var(--trans);
+    opacity: 1;
+    text-shadow: 1px 1px 10px black;
+    text-decoration: none;
+    color: var(--dwhitecolor);
+    letter-spacing: .3vw;
+    font-size: 1.1em;
+}
+
+.grid2 div:hover a {
+    opacity: 0;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+    background-image: linear-gradient(
+        rgba(184, 184, 184, 0.5), 
+        rgba(27, 27, 27, 0.5)
+      )
+      ,url(../img/colorgrade.png);
+    transition: var(--trans);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.two:hover {
+    background-image: url(../img/excolorgrade.gif);
+    transform: var(--hoversize) var(--moveleft) translate(0, -10px);
+}
+
+.three {
+    grid-area: three;    
+}
+
+.four {
+    grid-area: four;
+    background-image: linear-gradient(
+        rgba(184, 184, 184, 0.8), 
+        rgba(27, 27, 27, 0.8)
+      )
+      ,url(../img/illus-b.png);
+    background-size: cover;
+    transition: var(--trans);
+    background-position: center;
+}
+
+.four:hover {
+    background-image: url(../img/illus-f.png);
+    transform: var(--hoversize) var(--moveright) translate(0, -10px);
+}
+
+.five {
+    grid-area: five;
+    background-image: linear-gradient(
+        rgba(184, 184, 184, 0.8), 
+        rgba(27, 27, 27, 0.8)
+      )
+      ,url(../img/design.jpg);
+    background-size: cover;
+    transition: var(--trans);
+    background-position: center;
+}
+
+.five:hover {
+    background-image: url(../img/exdesign.jpg);
+    transform: var(--hoversize) var(--moveleft);
+}
+
+.six {
+    grid-area: six;
+    background-image: linear-gradient(
+        rgba(184, 184, 184, 0.8), 
+        rgba(27, 27, 27, 0.8)
+      )
+      ,url(../img/motion.png);
+    background-size: cover;
+    transition: var(--trans);
+    background-position: center;
+}
+
+.six:hover {
+    background-image: url(../img/exmotion.gif);
+    transform: var(--hoversize) var(--moveright);
+}
+
+.seven {
+    grid-area: seven;
+    background-image: linear-gradient(
+        rgba(184, 184, 184, 0.8), 
+        rgba(27, 27, 27, 0.8)
+      )
+      ,url(../img/imbored_m.png);
+    background-size: cover;
+    transition: var(--trans);
+    background-position: center;
+}
+
+.seven:hover {
+    background-image: url(../img/exVideoediting.gif);
+    transform: var(--hoversize) var(--moveleft) translate(0, 5px);
+}
+
+.eight {
+    grid-area: eight;
+    background-image: linear-gradient(
+        rgba(184, 184, 184, 0.8), 
+        rgba(27, 27, 27, 0.8)
+      )
+      ,url(../img/photo.JPG);
+    background-size: cover;
+    transition: var(--trans);
+    background-position: center;    
+}
+
+.eight:hover {
+    background-image: url(../img/photo1.JPG);
+    transform: var(--hoversize) var(--moveright) translate(0, 5px);
+}
+
+.nine {
+    grid-area: nine;
+}
+
+/* footer */
+footer {
+    background-color: var(--bblackcolor);
+    margin-top: 5%;
+    padding-bottom: 10px;
+}
+
+.flex {
+    display: flex;
+    margin-top: 30px;
+
+}
+
+.flex div {
+    height: auto;
+    flex: 1;
+    margin: 10px;
+    padding: 4vh 1vw 2vh 1vw;
+    
+}
+
+#flex1 {
+    flex: 1;
+    text-align: center;
+}
+
+#flex2 {
+    flex: 1;
+    text-align: center;
+}
+
+#flex2 img {
+    max-height: 100%;
+    height: auto;
+    max-width: 100%;
+    width: auto;
+    padding: 1vw;
+}
+
+#flex2 a {
+    text-decoration: none;
+    color: var(--dwhitecolor);
+}
+
+#flex3 {
+    flex: 1;
+}
+
+#flex3 ol {
+    line-height: 2;
+    padding: 0;
+}
+
+#flex3 ol a {
+    text-decoration: none;
+    color: var(--dwhitecolor);
+    font-size: 1em;
+    letter-spacing: .5vw;
+    padding-left: 3vw;
+}
+
+footer h4{
+    margin: 0;
+    text-align: center;
+    font-weight: 300;
+    font-size: .7em;
+}
+
+/* meida screen */
+@media screen and (max-width:1200px) {
+    
+    .grid {
+        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, max(250px));
+        grid-template-areas: 
+        'two two'
+        'one three'
+        'five five'
+        'four six'
+        'eight eight'
+        'seven nine';
+    }
+
+    .grid2 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 500px repeat(4, minmax(200px, 1fr));
+        grid-template-areas: 
+        'three three'
+        'one nine'
+        'four five'
+        'six seven'
+        'eight two'
+    }
+
+    .grid2 div {
+        transition: var(--trans);
+    }
+
+    .grid2 div:hover {
+        transform: var(--hoversize);
+    }
+
+    .grid2 h1, p {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .grid {
+        justify-content: center;
+        grid-template-columns: minmax(200px, 400px);
+        grid-template-rows: repeat(9, minmax(100px, 200px));
+        grid-template-areas: 
+        'two'
+        'one'
+        'three'
+        'five'
+        'four'
+        'six'
+        'eight'
+        'seven'
+        'nine';
+    }
+
+    .grid2 {
+        justify-content: center;
+        grid-template-columns: minmax(100px, 400px);
+        grid-template-rows: 1fr minmax(100px, 200px) repeat(7, minmax(150px, 250px)) ;
+        grid-template-areas: 
+        'three'
+        'one'
+        'two'
+        'four'
+        'five'
+        'six'
+        'seven'
+        'eight'
+        'nine';
+    }
+
+    .grid2 h1, p {
+        text-align: center;
+    }
+
+    .flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #flex3 a {
+        padding: 0;
+    }
+}
