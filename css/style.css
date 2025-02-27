@@ -110,9 +110,6 @@ main {
     text-align: center;
 }
 
-main #showcase {
-    
-}
 
 main #showcase #title-showcase {
     background-color: var(--dwhitecolor);
@@ -135,11 +132,6 @@ main #showcase #title-showcase {
     'seven eight eight nine';
 }
 
-.grid div {
-    /* border-radius: 10px; */
-    /* overflow: hidden;
-    justify-items: stretch; */
-}
 
 .grid div img {
     object-fit: cover;
