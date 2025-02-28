@@ -110,7 +110,6 @@ main {
     text-align: center;
 }
 
-
 main #showcase #title-showcase {
     background-color: var(--dwhitecolor);
     height: 10vh;
@@ -547,7 +546,7 @@ footer h4{
         text-align: center;
     }
     
-    #flex3 a {
-        padding: 0;
+    #flex3 ol a {
+        padding-left: 0vw;
     }
 }
